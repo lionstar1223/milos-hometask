@@ -1,0 +1,33 @@
+.loader {
+  position: relative;
+  overflow: hidden;
+}
+
+.loader::before {
+  content: " ";
+  background-color: white;
+  opacity: 0.1;
+  width: 100%;
+  position: absolute;
+  inset: 0px;
+}
+
+.loader::after {
+  content: " ";
+  position: absolute;
+  inset: 0px 0px 0px 0%;
+  width: 100%;
+  opacity: 0.1;
+  background-color: white;
+  animation: 1s linear 0s infinite normal none running loader;
+  border-radius: 3px;
+}
+
+@keyframes loader {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
